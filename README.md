@@ -1,17 +1,21 @@
 docker-icinga2
 ==============
 
-Installs an working icinga2 Core or Satellite based on alpine-linux
+Compile and installs an working icinga2 Core or Satellite based on alpine-linux
 
 # Status
 
-[![Build Status](https://travis-ci.org/bodsch/docker-icinga2.svg?branch=master)](https://travis-ci.org/bodsch/docker-icinga2)
+[![Build Status](https://travis-ci.org/bodsch/docker-icinga2.svg?branch=1612-01)](https://travis-ci.org/bodsch/docker-icinga2)
 
 # Build
+
+Use included `Makefile`
+
 
 # Docker Hub
 
 You can find the Container also at  [DockerHub](https://hub.docker.com/r/bodsch/docker-icinga2/)
+
 
 # supported Environment Vars
 
