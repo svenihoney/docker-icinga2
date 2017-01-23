@@ -5,7 +5,7 @@ Compile and installs an working icinga2 Core or Satellite based on alpine-linux
 
 # Status
 
-[![Build Status](https://travis-ci.org/bodsch/docker-icinga2.svg?branch=1612-01)](https://travis-ci.org/bodsch/docker-icinga2)
+[![Build Status](https://travis-ci.org/bodsch/docker-icinga2.svg?branch=dev)](https://travis-ci.org/bodsch/docker-icinga2)
 
 # Build
 
