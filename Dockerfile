@@ -18,6 +18,8 @@ RUN \
     build-base \
     ruby \
     ruby-dev \
+    drill \
+    bind-tools \
     pwgen \
     fping \
     unzip \
@@ -36,6 +38,7 @@ RUN \
   gem install --no-rdoc --no-ri \
     dalli \
     sequel \
+    ipaddress \
     json \
     time_difference \
     bigdecimal && \

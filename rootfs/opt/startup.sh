@@ -154,11 +154,23 @@ configureGraphite() {
   then
     icinga2 feature enable graphite
 
-    if [ -e /etc/icinga2/features-enabled/graphite.conf ]
-    then
-      sed -i "s,^.*\ //host\ =\ .*,  host\ =\ \"${CARBON_HOST}\",g" /etc/icinga2/features-enabled/graphite.conf
-      sed -i "s,^.*\ //port\ =\ .*,  port\ =\ \"${CARBON_PORT}\",g" /etc/icinga2/features-enabled/graphite.conf
-    fi
+    cat << EOF > /etc/icinga2/features-enabled/graphite.conf
+
+object GraphiteWriter "graphite" {
+  host = "${CARBON_HOST}"
+  port = ${CARBON_PORT}
+
+  enable_send_thresholds = true
+  enable_send_metadata = true
+}
+
+EOF
+
+#     if [ -e /etc/icinga2/features-enabled/graphite.conf ]
+#     then
+#       sed -i "s,^.*\ //host\ =\ .*,  host\ =\ \"${CARBON_HOST}\",g" /etc/icinga2/features-enabled/graphite.conf
+#       sed -i "s,^.*\ //port\ =\ .*,  port\ =\ \"${CARBON_PORT}\",g" /etc/icinga2/features-enabled/graphite.conf
+#     fi
   else
     echo " [i] no Settings for Graphite Feature found"
   fi
