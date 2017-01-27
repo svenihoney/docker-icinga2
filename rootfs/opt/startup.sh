@@ -156,6 +156,7 @@ configureGraphite() {
 
     cat << EOF > /etc/icinga2/features-enabled/graphite.conf
 
+library "perfdata"
 object GraphiteWriter "graphite" {
   host = "${CARBON_HOST}"
   port = ${CARBON_PORT}

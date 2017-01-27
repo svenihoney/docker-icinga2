@@ -1,5 +1,5 @@
 
-FROM bodsch/docker-alpine-base:1701-02
+FROM bodsch/docker-alpine-base:1701-04
 
 MAINTAINER Bodo Schulz <bodo@boone-schulz.de>
 
